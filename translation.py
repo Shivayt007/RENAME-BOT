@@ -42,8 +42,8 @@ class Translation(object):
     ABOUT_TXT = """
 ╔════❰ RENAME BOT ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼📃ʙᴏᴛ : [{}](https://t.me/{})
-║┣⪼👦Deployer : [GreyMatter's Owner](https://t.me/GreyMatter_Owner)
+║┣⪼📃ʙᴏᴛ : [{}](https://telegram.me/{})
+║┣⪼👦Deployer : [Rushidhar](https://telegram.me/Rushidhar1999)
 ║┣⪼📡ʜᴏsᴛᴇᴅ ᴏɴ : Koyeb
 ║┣⪼🗣️ʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ3
 ║┣⪼📚ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ ᴀsʏɴᴄɪᴏ {} 
