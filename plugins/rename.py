@@ -63,7 +63,7 @@ async def rename_doc(bot, message):
     duration = 0
     try:
        if upload_mode == "document":
-            app.send_document(-13134143141341,document=download_location)
+            app.send_document(chat_id = -13134143141341,document=download_location)
             msg = await upload(document=download_location)
           
        elif upload_mode == "video":
